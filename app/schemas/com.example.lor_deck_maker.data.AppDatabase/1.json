@@ -1,0 +1,106 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 1,
+    "identityHash": "3daf62eeb6d17beb4c4f3289bc3b5b79",
+    "entities": [
+      {
+        "tableName": "loRCard",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`gameAbsolutePath` TEXT, `fullAbsolutePath` TEXT, `regionRef` TEXT, `attack` INTEGER NOT NULL, `cost` INTEGER NOT NULL, `health` INTEGER NOT NULL, `descriptionRaw` TEXT, `levelupDescriptionRaw` TEXT, `name` TEXT, `cardCode` TEXT NOT NULL, `rarity` TEXT, `set` TEXT, `collectible` INTEGER NOT NULL, PRIMARY KEY(`cardCode`))",
+        "fields": [
+          {
+            "fieldPath": "gameAbsolutePath",
+            "columnName": "gameAbsolutePath",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "fullAbsolutePath",
+            "columnName": "fullAbsolutePath",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "regionRef",
+            "columnName": "regionRef",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "attack",
+            "columnName": "attack",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "cost",
+            "columnName": "cost",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "health",
+            "columnName": "health",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "descriptionRaw",
+            "columnName": "descriptionRaw",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "levelupDescriptionRaw",
+            "columnName": "levelupDescriptionRaw",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "name",
+            "columnName": "name",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "cardCode",
+            "columnName": "cardCode",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "rarity",
+            "columnName": "rarity",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "set",
+            "columnName": "set",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "collectible",
+            "columnName": "collectible",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "cardCode"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "views": [],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '3daf62eeb6d17beb4c4f3289bc3b5b79')"
+    ]
+  }
+}

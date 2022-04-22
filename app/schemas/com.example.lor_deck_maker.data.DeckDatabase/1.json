@@ -1,0 +1,52 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 1,
+    "identityHash": "09ac208b0093393d939987a70e2d6cb1",
+    "entities": [
+      {
+        "tableName": "loRDeck",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`CardsInDeck` TEXT, `DeckName` TEXT NOT NULL, `region1` TEXT, `region2` TEXT, PRIMARY KEY(`DeckName`))",
+        "fields": [
+          {
+            "fieldPath": "CardsInDeck",
+            "columnName": "CardsInDeck",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "DeckName",
+            "columnName": "DeckName",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "region1",
+            "columnName": "region1",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "region2",
+            "columnName": "region2",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "DeckName"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "views": [],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '09ac208b0093393d939987a70e2d6cb1')"
+    ]
+  }
+}

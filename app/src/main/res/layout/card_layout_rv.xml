@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_cost"
+        android:text="@string/cost"
+        android:textSize="20dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/black"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_name"
+        android:text="@string/name"
+        android:textSize="20dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal"
+        android:textColor="@color/black"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_gravity="right"
+        android:text="@string/rarity"
+        android:id="@+id/tv_rarity"
+        android:layout_alignParentRight="true"
+        android:textColor="@color/black"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_name"
+        android:text="@string/description"
+        android:layout_centerHorizontal="true"
+        android:textSize="20dp"
+        android:textColor="@color/black"
+        android:layout_marginTop="15dp"
+        android:id="@+id/tv_description"
+        android:layout_marginBottom="15dp"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_attack"
+        android:layout_below="@id/tv_description"
+        android:text="@string/attack"
+        android:layout_marginBottom="5dp"
+        android:textSize="20dp"
+        android:textColor="@color/black"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_health"
+        android:layout_alignParentRight="true"
+        android:text="@string/health"
+        android:layout_below="@id/tv_description"
+        android:textSize="20dp"
+        android:textColor="@color/black"/>
+
+
+
+
+
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/card_count"
+        android:layout_below="@id/tv_description"
+        android:layout_centerHorizontal="true"
+        android:inputType="number"
+        android:hint="0"
+        android:textSize="20dp"/>
+
+
+
+
+
+
+</RelativeLayout>
